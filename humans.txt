@@ -1,14 +1,14 @@
 # humanstxt.org/
 
 /* TEAM */
-	One-man team: Lee Ji-Tae
-	Contact: easytae@gmail.com
-	Location: South Korea
+	Developer: Lee Ji-Tae
+	Contact: easytae@naver.com
 
 /* THANKS */
+  Character Designer: John (Seungyong) Ahn
 
 /* SITE */
-	Last update: 2021/06/20
+	Last update: 2021/06/21
 	Language: Korean
 	Components: Normalize.css, Modernizr.js, Material Design
-	Software: GoLand, Atom
+	Software: GoLand, Atom, PIXLR, Font Awesome ICON,

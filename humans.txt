@@ -8,7 +8,7 @@
   Character Designer: John (Seungyong) Ahn
 
 /* SITE */
-	Last update: 2021/06/21
+	Last update: 2021/07/01
 	Language: Korean
-	Components: Normalize.css, Modernizr.js, Material Design
-	Software: GoLand, Atom, PIXLR, Font Awesome ICON,
+	Components: Bootstrap, Bootstrap Icons,
+	Software: GoLand, Atom, PIXLR,

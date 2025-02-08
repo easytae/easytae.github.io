@@ -9,9 +9,6 @@
           <span class="posts-list-item-description">
             {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
             {{ .PublishDate.Format "2006-01-02 15:04" }}
-            <span class="posts-list-item-separator">-</span>
-            {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
-            {{ .ReadingTime }} min read
           </span>
         </li>
       {{ end }}

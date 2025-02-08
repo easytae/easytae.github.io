@@ -4,6 +4,16 @@ theme = 'hugo-theme-m10c'
 
 title = '기록'
 [params]
-  author = "이지태"
-  description = "바쁠 틈이 없다"
-  avatar = "avatar.webp"
+  author = '이지태'
+  description = '바쁠 틈이 없다'
+  avatar = 'avatar.webp'
+
+[markup]
+  [markup.highlight]
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = 'vulcan'
+    tabWidth = 2
+    wrapperClass = 'highlight'

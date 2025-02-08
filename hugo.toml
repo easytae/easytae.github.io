@@ -1,0 +1,9 @@
+baseURL = 'https://easytae.github.com/'
+languageCode = 'ko-kr'
+theme = 'hugo-theme-m10c'
+
+title = '기록'
+[params]
+  author = "이지태"
+  description = "hi<br/>asdasd"
+  avatar = "avatar.webp"

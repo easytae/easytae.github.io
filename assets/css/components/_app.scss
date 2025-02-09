@@ -35,10 +35,6 @@
   font-weight: bold;
 }
 
-#TableOfContents {
-  display: none;
-}
-
 @media (min-width: 940px) {
   .app-header {
     position: fixed;
@@ -51,17 +47,6 @@
     .app-header-avatar {
       width: 5rem;
       height: 5rem;
-    }
-
-    #TableOfContents {
-      display: block;
-      font-size: .85em;
-      text-align: left;
-      ul {
-        list-style-type: square;
-        margin: 0;
-        padding-left: 1em;
-      }
     }
   }
 

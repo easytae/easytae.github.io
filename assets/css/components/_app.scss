@@ -1,12 +1,12 @@
 .app-header {
-  padding: 2.5em;
+  padding: 1.5em;
   background: $darkest-color;
   text-align: center;
 }
 
 .app-header-avatar {
-  width: Min(10rem, 100%);
-  height: Min(10rem, 100%);
+  width: 10rem;
+  height: 10rem;
   border-radius: 100%;
   border: 0.5rem solid $primary-color;
 }
@@ -35,13 +35,34 @@
   font-weight: bold;
 }
 
+#TableOfContents {
+  display: none;
+}
+
 @media (min-width: 940px) {
   .app-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 12rem;
-    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
+
+    .app-header-avatar {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    #TableOfContents {
+      display: block;
+      font-size: .85em;
+      text-align: left;
+      ul {
+        list-style-type: square;
+        margin: 0;
+        padding-left: 1em;
+      }
+    }
   }
 
   .app-container {
@@ -53,7 +74,7 @@
     height: .5em;
   }
   ::-webkit-scrollbar-track {
-    background: #353b43;
+    //background: #353b43;
   }
   ::-webkit-scrollbar-thumb {
     background: #4b535d;

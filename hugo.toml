@@ -12,3 +12,7 @@ title = '기록'
   unsafe = true
 [markup.highlight]
   noClasses = true
+[markup.tableOfContents]
+  ordered = false
+  startLevel = 1
+  endLevel = 3

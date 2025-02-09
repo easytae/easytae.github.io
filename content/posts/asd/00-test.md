@@ -12,7 +12,7 @@ draft = true
 
 **굵게** ~~취소선~~
 
-링크는? www.commonmark.org
+링크는 자동으로 걸림 www.commonmark.org
 
 | 머리1 |   머리2    | 머리3 |
 |:----|:--------:|---:|
@@ -20,13 +20,11 @@ draft = true
 |     |          | 오른쪽 |
 | 왼쪽  |
 
-일반 코드는 pre, code 사용해서 html로 작성
-
 좌우 분할은 커스텀
 
 <div class="split">
 
-```css{data-line="1-3,5"}
+```css{data-line="1-3"}
 @media screen {
     div {
         text-decoration: underline;
@@ -34,15 +32,7 @@ draft = true
     }
 }
 ```
-```css
-@media screen {
-    div {
-        text-decoration: underline;
-        background: url('foo.png');
-    }
-}
-```
-```css
+```css{data-line="4,6"}
 @media screen {
     div {
         text-decoration: underline;
@@ -55,9 +45,8 @@ draft = true
 
 인라인 코드는 pre를 제외하고 작성 <code class="language-java">System.out.println("hello...");</code>
 
-asdasd~(이건)'뭔데
+폴더구조
 
-폴더구조 가능
 ```treeview{.no-line-numbers}
 root_folder/
 |-- going deeper/

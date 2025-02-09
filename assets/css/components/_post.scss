@@ -36,8 +36,9 @@
 
   pre[class*=language-] {
     .line-highlight {
-      width: 100% !important;
-      background: hsla(24, 20%, 50%, .1) 70%;
+      left: 3em;
+      width: calc(100% - 3em) !important;
+      background: rgba(87,204,138,.1);
     }
   }
 

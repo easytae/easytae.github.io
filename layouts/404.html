@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <div class="error-404">
+    <h1 class="error-404-title">4{{ partial "icon.html" (dict "ctx" $ "name" "frown") }}4 </h1>
+    <p>잘못된 접근입니다.</p>
+    <a href="{{ "/" | relURL }}">홈으로 이동 {{ partial "icon.html" (dict "ctx" $ "name" "arrow-right") }}</a>
+  </div>
+{{ end }}

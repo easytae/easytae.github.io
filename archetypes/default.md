@@ -1,5 +1,9 @@
 +++
-title = '타이틀'
 date = '{{ .Date }}'
+languages = []
+frameworks = []
+libraries = []
+topics = []
+title = '타이틀'
 draft = true
 +++

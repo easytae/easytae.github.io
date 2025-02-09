@@ -43,6 +43,10 @@
         {{ end }}
     </div>
     {{- end }}
+
+    <ul class="taxonomy-list">{{ range $v, $name := .Site.Params.taxonomies }}
+        <li><a href="{{ (printf "/%s/" $name ) | relURL }}">{{ $name }}</a></li>
+    {{ end }}</ul>
 </header>
 <main class="app-container">
     {{ block "main" . }}

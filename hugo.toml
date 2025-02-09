@@ -1,18 +1,18 @@
 baseURL = 'https://easytae.github.io/'
 languageCode = 'ko-kr'
 theme = 'hugo-theme-m10c'
-
 title = '기록'
+
 [params]
-  author = '이지태'
-  description = '바쁠 틈이 없다'
-  avatar = 'avatar.webp'
+    author = '이지태'
+    description = '바쁠 틈이 없다'
+    avatar = 'avatar.webp'
+    taxonomies = ["languages", "frameworks", "libraries"]
+
+[taxonomies]
+    language = "languages"
+    framework = "frameworks"
+    library = "libraries"
 
 [markup.goldmark.renderer]
-  unsafe = true
-[markup.highlight]
-  noClasses = true
-[markup.tableOfContents]
-  ordered = false
-  startLevel = 1
-  endLevel = 3
+    unsafe = true

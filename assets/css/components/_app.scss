@@ -35,6 +35,11 @@
   font-weight: bold;
 }
 
+.taxonomy-list {
+  list-style-type: none;
+  padding: 0;
+}
+
 @media (min-width: 940px) {
   .app-header {
     position: fixed;

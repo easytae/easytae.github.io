@@ -1,49 +1,67 @@
 +++
 title = '00 Test'
 date = '2025-02-08T15:49:04+09:00'
-draft = false
+draft = true
 +++
 
-테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트 테스트테스트테스트테스트테스트테스트테스트테스트
+# 제목
 
-{{< highlight java "hl_lines=8 15-17" >}}
-import 'package:flutter/material.dart';
+## 부제목
 
-import '/consts.dart';
-import '/service/abs_do.dart';
-import '/style_var.dart';
-import 'sheet.dart';
+### 부부제목
 
-abstract class SettingMainState<W extends StatefulWidget, GroupDo extends AbsDo, ItemDo extends AbsDo> extends State<W> {
-  // group
-  final ScrollController _groupScrollController = ScrollController();
-  final List<GroupDo> _groupList = [];
-  int? _selectedGroupId;
+**굵게** ~~취소선~~
 
-  @override
-  void dispose() {
-    _itemScrollController.dispose();
-    _groupScrollController.dispose();
-    super.dispose();
-  }
+링크는? www.commonmark.org
 
-  String get name;
+| 머리1 |   머리2    | 머리3 |
+|:----|:--------:|---:|
+|     |   가운데    |
+|     |          | 오른쪽 |
+| 왼쪽  |
 
-  bool get isGroupTree => true;
+일반 코드는 pre, code 사용해서 html로 작성
 
-  Future<void> _loadItemListInGroup(GroupDo target) async {
-    List<ItemDo> list = await loadItemList(target.id!);
-    setState(() {
-      _selectedGroupId = target.id;
-      _itemList.clear();
-      _itemList.addAll(list);
-    });
-  }
+좌우 분할은 커스텀
 
-  Future<void> _setSelected(ItemDo target) async {
-    setState(() {
-      _selectedItemId = target.id;
-    });
-  }
-}
-{{< / highlight >}}
+<div class="split">
+    <div><pre><code class="language-css">
+        @media screen {
+            div {
+                text-decoration: underline;
+                background: url('foo.png');
+            }
+        }
+    </code></pre></div>
+    <div><pre><code class="language-css">
+        @media screen {
+            div {
+                text-decoration: underline;
+                background: url('foo.png');
+            }
+        }
+    </code></pre></div>
+</div>
+
+인라인 코드는 pre를 제외하고 작성 <code class="language-java">System.out.println("hello...");</code>
+
+폴더구조 가능
+<pre><code class="language-treeview no-line-numbers">
+root_folder/
+|-- going deeper/
+|   |-- going deeper/
+|   |   |-- .secret_file
+|   |   `-- sample.pptx
+|   |-- style.css
+|   `-- index.html
+|-- .gitignore
+|-- .npmignore
+|-- archive.zip
+|-- logo.svg
+`-- README.md
+</code></pre>
+
+풋노트[^1]는 숫자로 작성하는데
+[^1]: 이렇게 하면 자동으로 아래에 만들어준다.
+
+> 인용은 쉽다

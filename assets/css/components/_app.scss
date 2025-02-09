@@ -47,4 +47,25 @@
   .app-container {
     margin-left: 12rem;
   }
+
+  .split {
+    display: flex;
+    > * {
+      flex: 1;
+    }
+
+    overflow-x: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: .5em;
+    height: .5em;
+  }
+  ::-webkit-scrollbar-track {
+    background: #353b43;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4b535d;
+    border-radius: .5em;
+  }
 }

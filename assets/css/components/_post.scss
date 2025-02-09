@@ -1,0 +1,53 @@
+.post-title {
+  color: $lightest-color;
+}
+
+.post-meta > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2em;
+  font-size: 0.8em;
+
+  > .icon {
+    margin-right: 0.4em;
+  }
+}
+
+.post-content {
+  & > pre,
+  .highlight {
+    margin: 1em 0;
+  }
+
+  blockquote {
+    border-left: 0.4em solid rgba($primary-color, .8);
+    margin: 1em 0em;
+    padding: .5em 1em;
+    background: $darkest-color;
+
+    p {
+      margin: .5em 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  pre[class*=language-] {
+    padding: 0.5em;
+    margin: 0;
+  }
+
+  :not(pre)>code[class*=language-] {
+    padding: 0.3em 0.5em;
+  }
+
+  .footnotes {
+    hr {
+      border-color: #888888;
+    }
+    font-size: 0.8em;
+  }
+}

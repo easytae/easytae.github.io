@@ -4,7 +4,7 @@ date = '2025-02-08T15:49:04+09:00'
 draft = true
 +++
 
-# 제목
+# 제목{#id .className attrName=attrValue}
 
 ## 부제목
 
@@ -25,28 +25,40 @@ draft = true
 좌우 분할은 커스텀
 
 <div class="split">
-    <div><pre><code class="language-css">
-        @media screen {
-            div {
-                text-decoration: underline;
-                background: url('foo.png');
-            }
-        }
-    </code></pre></div>
-    <div><pre><code class="language-css">
-        @media screen {
-            div {
-                text-decoration: underline;
-                background: url('foo.png');
-            }
-        }
-    </code></pre></div>
+
+```css{data-line="1-3,5"}
+@media screen {
+    div {
+        text-decoration: underline;
+        background: url('foo.png');
+    }
+}
+```
+```css
+@media screen {
+    div {
+        text-decoration: underline;
+        background: url('foo.png');
+    }
+}
+```
+```css
+@media screen {
+    div {
+        text-decoration: underline;
+        background: url('foo.png');
+    }
+}
+```
+
 </div>
 
 인라인 코드는 pre를 제외하고 작성 <code class="language-java">System.out.println("hello...");</code>
 
+asdasd~(이건)'뭔데
+
 폴더구조 가능
-<pre><code class="language-treeview no-line-numbers">
+```treeview{.no-line-numbers}
 root_folder/
 |-- going deeper/
 |   |-- going deeper/
@@ -59,7 +71,7 @@ root_folder/
 |-- archive.zip
 |-- logo.svg
 `-- README.md
-</code></pre>
+```
 
 풋노트[^1]는 숫자로 작성하는데
 [^1]: 이렇게 하면 자동으로 아래에 만들어준다.

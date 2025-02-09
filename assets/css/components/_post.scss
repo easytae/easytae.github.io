@@ -15,9 +15,34 @@
 }
 
 .post-content {
-  & > pre,
-  .highlight {
-    margin: 1em 0;
+  .split {
+    @media (min-width: 940px) {
+      display: flex;
+      gap: .3em;
+      > * {
+        flex: 1;
+      }
+      overflow-y: scroll;
+    }
+
+    &.rounded {
+      border-radius: .3em;
+      >* {
+        border-radius: unset !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  pre[class*=language-] {
+    .line-highlight {
+      width: 100% !important;
+      background: hsla(24, 20%, 50%, .1) 70%;
+    }
+  }
+
+  :not(pre)>code[class*=language-] {
+    padding: 0.3em 0.5em;
   }
 
   blockquote {
@@ -33,15 +58,6 @@
 
   img {
     max-width: 100%;
-  }
-
-  pre[class*=language-] {
-    padding: 0.5em;
-    margin: 0;
-  }
-
-  :not(pre)>code[class*=language-] {
-    padding: 0.3em 0.5em;
   }
 
   .footnotes {

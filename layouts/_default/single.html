@@ -4,10 +4,17 @@
       <h1 class ="post-title">{{ .Title }}</h1>
       {{- if ne .Type "page" }}
       <div class="post-meta">
-        <div>
-          {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-          {{ .PublishDate.Format "2006-01-02 15:04" }}
-        </div>
+        <div>{{ partial "icon.html" (dict "ctx" $ "name" "calendar") }} {{ .PublishDate.Format "2006-01-02 15:04" }}</div>
+        {{ $p := .Params }}
+        {{ range $i, $taxonomy := .Site.Params.taxonomies }}
+          {{ if isset $p $taxonomy }}
+            <div>
+              {{ partial "icon.html" (dict "ctx" $ "name" "tag") }} {{$taxonomy}}: {{ range $i, $val := index $p $taxonomy }}
+                {{ if ne $i 0 }}, {{ end }} <a href="{{ (printf "/%s/%s" $taxonomy $val ) | relURL }}">{{ $val }}</a>
+              {{ end }}
+            </div>
+          {{ end}}
+        {{ end }}
         {{- with .Params.tags }}
         <div>
           {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}

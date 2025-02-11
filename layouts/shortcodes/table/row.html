@@ -1,0 +1,13 @@
+<div class="r">
+    {{- $headers := .Parent.Get "headers" -}}
+    {{- $headerJsonStr := printf "%s%s%s" "{\"list\":[" $headers "]}" -}}
+    {{- $headerJson := unmarshal $headerJsonStr -}}
+
+    {{- $cells := .Get "cells" -}}
+    {{- $cellJsonStr := printf "%s%s%s" "{\"list\":[" $cells "]}" -}}
+    {{- $cellJson := unmarshal $cellJsonStr -}}
+
+    {{- range $i, $header := $headerJson.list -}}
+        <div class="c" data-title="{{$header}}">{{index $cellJson.list $i}}</div>
+    {{- end -}}
+</div>

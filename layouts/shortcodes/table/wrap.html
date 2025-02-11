@@ -1,0 +1,9 @@
+<div class="tb">
+    <div class="r h">
+        {{- $headers := .Get "headers" -}}
+        {{- $jsonStr := printf "%s%s%s" "{\"list\":[" $headers "]}" -}}
+        {{- $json := unmarshal $jsonStr -}}
+        {{- range $txt := $json.list -}}<div class="c">{{$txt}}</div>{{- end -}}
+    </div>
+    {{ .InnerDeindent | strings.TrimSpace | .Page.RenderString }}
+</div>

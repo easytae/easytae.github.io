@@ -6,26 +6,23 @@ title = '00 Test'
 draft = true
 +++
 
-# 제목 레벨1
+{{<split>}}
+{{<box title="# 제목 레벨1">}}# 제목 레벨1{{</box>}}
+{{<box title="## 제목 레벨2">}}## 제목 레벨2{{</box>}}
+{{<box title="### 제목 레벨3">}}### 제목 레벨3{{</box>}}
+{{</split>}}
 
-## 제목 레벨2
+{{<split>}}
+{{<box title="**굵게**">}}**굵게**{{</box>}}
+{{<box title="~~취소선~~">}}~~취소선~~{{</box>}}
+{{</split>}}
 
-### 제목 레벨3
+{{<table/wrap headers="\"이름\",\"버전\"">}}
+  {{<table/row cells="\"Spring Boot\",\"3.4.2\"">}}
+  {{<table/row cells="\"QueryDsl\",\"5.1.0\"">}}
+{{</table/wrap>}}
 
-**굵게** ~~취소선~~
-
-링크는 자동으로 걸림 www.commonmark.org
-
-| 머리1 |   머리2    | 머리3 |
-|:----|:--------:|---:|
-|     |   가운데    |
-|     |          | 오른쪽 |
-| 왼쪽  |
-
-좌우 분할은 커스텀
-
-<div class="split">
-
+{{<split>}}
 ```css{data-line="1-3"}
 @media screen {
     div {
@@ -42,12 +39,9 @@ draft = true
     }
 }
 ```
+{{</split>}}
 
-</div>
-
-인라인 코드는 pre를 제외하고 작성 <code class="language-java">System.out.println("hello...");</code>
-
-폴더구조
+인라인 코드 <code class="language-java">System.out.println("hello...");</code>
 
 ```treeview{.no-line-numbers}
 root_folder/
@@ -64,7 +58,11 @@ root_folder/
 `-- README.md
 ```
 
-풋노트[^1]는 숫자로 작성하는데
-[^1]: 이렇게 하면 자동으로 아래에 만들어준다.
+> 인용
 
-> 인용은 쉽다
+풋노트[^a]는 숫자로 작성하는데
+[^a]: 이렇게 하면 자동으로 아래에 만들어준다.
+
+풋노트[^b]의 위치는 자동으로 내려간다.
+[^b]: 숫자는 자동으로 만들어지는듯 하다.
+

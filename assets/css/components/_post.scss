@@ -23,7 +23,6 @@
       > * {
         flex: 1;
       }
-      overflow-x: overlay;
     }
     margin-bottom: .5em;
   }
@@ -80,7 +79,7 @@
     .r {
       background: #2D2D2D;
       &:nth-of-type(odd) {
-        background: #363636;
+        background: #323232;
       }
       &.h {
         background: rgba(87,204,138,.3);

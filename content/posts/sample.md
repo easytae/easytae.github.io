@@ -1,8 +1,8 @@
 +++
 date = '2025-02-08T15:49:04+09:00'
-languages = ['dart']
-frameworks = ['flutter']
-title = '00 Test'
+languages = ['markdown']
+frameworks = ['hugo']
+title = 'Sample'
 draft = true
 +++
 
